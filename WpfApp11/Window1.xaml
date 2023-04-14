@@ -1,0 +1,45 @@
+﻿<Window x:Class="WpfApp11.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp11"
+        mc:Ignorable="d"
+        Title="товар" Height="450" Width="800">
+    <Grid >
+        <TextBlock Text="имя товара" HorizontalAlignment="Left" Margin="47,63,0,0" VerticalAlignment="Top" Height="35" Width="193"/>
+        <TextBlock Text="{Binding Path=Name}"/>
+        <TextBlock  Text="стоимость" HorizontalAlignment="Left" Margin="47,103,0,0" VerticalAlignment="Top" Height="35" Width="193"/>
+        <TextBlock Text="{Binding Path=Price}"/>
+        <TextBlock  Text="описание" HorizontalAlignment="Left" Margin="47,143,0,0" VerticalAlignment="Top" Height="35" Width="193"/>
+        <TextBlock Text="{Binding Path=Options}"/>
+
+        <Border
+            Margin="278,202,372,81"
+            BorderBrush="Black" BorderThickness="1">
+            <Image 
+            x:Name="image_qrcode"
+                Stretch ="Uniform"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+        </Border>
+        <Button 
+            x:Name="tb_generate"
+            Click="tb_generate_Click"   
+            Content="Сгенерировать QR CODE"
+            HorizontalAlignment="Left" 
+            Margin="47,321,0,0" 
+            VerticalAlignment="Top" 
+            Width="149" Height="32"/>
+        <TextBox  HorizontalAlignment="Left" Margin="130,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="130,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="130,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        
+
+
+
+
+
+
+    </Grid>
+</Window>
